@@ -1,0 +1,29 @@
+log_level: debug
+
+api_key: APIeBmDPbze2t8Q
+api_secret: Fus0AiyvBvEsZBLNuiJP3fWKCdBFG33e3kUhkMtZUteB
+
+ws_url: ws://localhost:7880
+
+redis:
+  address: localhost:6379
+  db: 0
+
+sip_port: 5060
+
+rtp_port: 10000-20000
+
+# Keep internal/private communication
+host: 10.106.0.106   
+
+use_external_ip: false
+
+
+# Include docker subnet too
+local_net: 10.0.0.0/8,172.16.0.0/12
+
+healthcheck:
+  test: ["CMD", "livekit-sip", "--version"]
+  interval: 30s
+  timeout: 5s
+  retries: 3
