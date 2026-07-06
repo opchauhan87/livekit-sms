@@ -1,11 +1,9 @@
-version: "3.8"
-
 services:
   dashboard:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: livekit-dashboard
+    container_name: livekit-dashboard-1
     ports:
       - "8000:8000"
     environment:
